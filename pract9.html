@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <title>Practical 9</title>
+</head>
+<body class="bg-warning">
+    <h3 class="text-center mt-4">Practical 9</h3>
+    <div class="row bg-success text-white" style="height:20vh; padding: 20px;" >
+        <h5>Drop Down Menu:</h5>
+        <label for="pet-select">Select a pet:</label>
+        <select name="pets" id="pet-select" class="form-select form-control">
+            <option value="">--Please choose an option--</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="goldfish">Goldfish</option>
+        </select>
+    </div>
+    <div class="row bg-primary text-white" style="height:20vh; padding: 20px;" >
+        <h5>Drop Up Menu</h5>
+        <input class="form-control" list="fruits" placeholder="Select an item">
+        <datalist id="fruits">
+            <option value="Pineapple"></option>
+            <option value="Strawberry"></option>
+            <option value="Blueberry"></option>
+            <option value="Kiwi"></option>
+            <option value="Cherry"></option>
+        </datalist>
+    </div>
+
+    <div class="row" style="height:200px; padding: 20px;">
+        <h2>Bootstrap Icon Examples</h2>
+        <p>Envelope icon: <i class="bi bi-envelope"></i></p>    
+        <p>Envelope icon as a link:
+          <a href="#">
+            <i class="bi bi-envelope"></i>
+          </a>
+        </p>
+        <p>Search icon: <i class=" bi-search"></i></p>
+        <p>Search icon on a button:
+          <button type="button" class="btn-default">
+            <i class="bi-search"></i> Search
+          </button>
+        </p>
+        <p>Search icon on a styled button:
+          <button type="button" class="bg-primary rounded">
+            <i class="bi bi-search"></i> Search
+          </button>
+        </p>
+        <p>Print icon: <i class="bi bi-printer"></i></p>      
+        <p>Print icon on a styled link button:
+          <a href="pract10.html" class="btn btn-success btn-lg">
+            <i class="bi bi-printer"></i> Print 
+          </a>
+        </p> 
+    </div>
+</body>
+</html>

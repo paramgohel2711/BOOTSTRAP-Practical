@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Progress Bars</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+    <style>
+        .progress {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <h1>Bootstrap Progress Bars</h1>
+
+    <!-- Existing Progress Bars -->
+    <h4>Progress Bar 1</h4>
+    <div class="progress">
+        <div id="progress1" class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+    </div>
+    <h4>Progress Bar with Label</h4>
+    <div class="progress">
+        <div id="progress3" class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+    </div>
+
+    <h4>Multi-color Progress Bar</h4>
+    <div class="progress">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" >60%</div>
+        <div class="progress-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="30" >30%</div>
+        <div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="10">10%</div>
+    </div>
+
+    <h4>Striped Progress Bar</h4>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+    </div>
+
+    <h4>Animated Striped Progress Bar</h4>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+    </div>
+
+    <!-- Slider Progress Bar -->
+    <h4>Slider Progress Bar</h4>
+    <div class="progress">
+        <div id="sliderProgress" class="progress-bar bg-primary" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+    </div>
+
+    <!-- Buttons to Change Slider Progress Bar Value -->
+    <button id='increaseValue' class='btn btn-primary'>Increase Slider Progress Bar Value</button>
+    <button id='decreaseValue' class='btn btn-danger'>Decrease Slider Progress Bar Value</button>
+
+</div>
+<script>
+var sliderValue = 0; // Starting value for the slider progress bar
+document.getElementById('increaseValue').addEventListener('click', function () {
+    var sliderProgress = document.getElementById('sliderProgress');
+    if (sliderValue < 100) { // Ensure it doesn't exceed 100
+        sliderValue++;
+    }
+    sliderProgress.style.width = sliderValue + "%";
+    sliderProgress.setAttribute("aria-valuenow", sliderValue);
+    sliderProgress.innerText = sliderValue + "%";
+});
+document.getElementById('decreaseValue').addEventListener('click', function () {
+    var sliderProgress = document.getElementById('sliderProgress');
+    if (sliderValue > 0) { // Ensure it doesn't go below 0
+        sliderValue--;
+    }
+    sliderProgress.style.width = sliderValue + "%";
+    sliderProgress.setAttribute("aria-valuenow", sliderValue);
+    sliderProgress.innerText = sliderValue + "%";
+});
+</script>
+
+</body>
+</html>

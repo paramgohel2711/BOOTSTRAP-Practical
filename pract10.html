@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester Menu with Submenu</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.bundle.min.js"></script>
+</head>
+<body >
+    <div class="container text-center py-5">
+        <h1 class="mb-4">Semester Menu</h1>
+        <!-- Button Toolbar for Main Menu -->
+        <div class="btn-toolbar justify-content-center mb-3" role="toolbar" aria-label="Main Menu">
+            <div class="btn-group" role="group" aria-label="Main Menu">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#odd-submenu" aria-expanded="false" aria-controls="odd-submenu">
+                    Odd Semesters
+                </button>
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#even-submenu" aria-expanded="false" aria-controls="even-submenu">
+                    Even Semesters
+                </button>
+            </div>
+        </div>
+        <!-- Submenu for Odd Semesters -->
+        <div class="collapse mb-3" id="odd-submenu">
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-primary">Sem 1</button>
+                <button type="button" class="btn btn-outline-primary">Sem 3</button>
+                <button type="button" class="btn btn-outline-primary">Sem 5</button>
+            </div>
+        </div>
+        <!-- Submenu for Even Semesters -->
+        <div class="collapse mb-3" id="even-submenu">
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-secondary">Sem 2</button>
+                <button type="button" class="btn btn-outline-secondary">Sem 4</button>
+                <button type="button" class="btn btn-outline-secondary">Sem 6</button>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS (for collapse functionality) -->
+</body>
+</html>
